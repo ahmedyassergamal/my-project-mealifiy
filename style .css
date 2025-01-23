@@ -1,0 +1,895 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.navbar{
+
+    display: flex;
+    justify-content: center;
+
+}
+.navbar .container{
+    
+    width: 90%;
+    display: flex;
+    justify-content:space-between;
+   align-items: center;
+}
+
+.navbar .container h1{
+    font-size: 30px;
+    color: black;
+}
+
+h1::after {
+content: '';
+position: absolute;
+width: 5px;
+height: 5px;
+top: 6%;
+border-radius: 50%;
+background-color: red;
+}
+
+.navbar .container ul li{
+    display: inline;
+    margin-inline: 10px;
+
+}
+.navbar .container ul li a{
+    font-size: 18px;
+}
+.navbar .container ul li{
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.navbar .container ul{
+    padding-left: 0px;
+}
+.navbar .container .menu .not-home::after{
+    content: ' ';
+   position: absolute;
+   width: 0%;
+   height: 2px;
+   background-color: red;
+   bottom: 0;
+   left: 0;
+   transition: all 0.5s;
+   }
+   .navbar .container .menu .not-home:hover::after{
+    width: 100%;
+   }
+   
+ .home::after{
+content: ' ';
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: red;
+bottom: 0;
+left: 0;
+
+}
+.navbar .container .menu{
+    display: flex;
+    justify-content: center;
+}
+.navbar .container .menu a{
+    color: #848494;
+    position: relative;
+    padding-bottom: 5px;
+    padding: 5px;
+    font-size:17px;
+    font-weight: 600px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ .navbar .container .menu .home{
+    color: black;
+    font-weight: 600Px;
+  padding-bottom: 5px;
+}
+.navbar .container .logo i{
+font-size: 30px;
+color: black;
+}
+.header{
+    width: 100vh;
+    width: 100%;
+    background-color:#eee;
+}
+.header .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header .container .about-image{
+  
+   
+    
+   
+    display: flex;  
+    justify-content: space-around;
+    align-content: center;
+align-items: center;
+}
+.header .container .info-image {
+
+position: relative;
+
+}
+.header .container .info-image h2{
+    color: var(--color-secondary);
+    font-family: "Amatic SC", sans-serif;
+    font-size: 4.0625rem;
+}
+.header .container button{
+    border: 0;;
+}
+.header .container .btn1{
+    
+    background-color: darkred;
+    padding:16px 40px ;
+    border-radius: 0vh 100vh 100vh 100vh;
+    margin-right: 10px; 
+}
+.header .container .btn1 :hover{
+background-color: red;
+}
+.header .container .btn1 a{
+    color: white;
+ 
+}
+
+.header .container .btns .btn2{
+    display: flex;
+ 
+    position: relative;
+    bottom: 60px;
+    left: 180px;
+    padding:10px 25px ;
+    align-items: center;
+  
+    
+}
+.header .container .btns .btn2 a{
+    color: black;
+    transition: all 0.5;
+}
+.play-icon{
+width: 50px;
+height: 50px;
+background-color: red;
+background:linear-gradient(to right, red 0% 50% , transparent 50% 100%) ;
+border-radius: 50%;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.play-icon::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+.play-icon i{
+    z-index: 10;
+    transition: all 0.5;
+}
+
+.play-icon i:hover {
+    color: red;
+    
+    
+}
+.header .container .btns .btn2 a:hover{
+    color: red;
+}
+.header .container .image{
+width: 35%;
+display: flex;
+justify-content: flex-end;
+position: relative;
+padding-top: 20px;
+padding-bottom: 20px;
+margin: 25px;
+
+}
+
+.header .container .image img{
+    width: 95%;
+    padding-top: 20px;
+    filter: drop-shadow(4px 4px 9px #000a);
+}
+.header .container .image img:hover{
+    animation: move 1s infinite;
+}
+
+@keyframes move {
+    0% {
+    transform: translate(1px, 1px) rotate(0deg)};
+
+10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+}
+20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+}
+30% {
+    transform: translate(3px, 2px) rotate(0deg);
+}
+40% {
+    transform: translate(1px, -1px) rotate(1deg);
+}
+50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+}
+60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+}
+70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+}
+80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+}
+90% {
+    transform: translate(1px, 2px) rotate(0deg);
+}
+100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+}
+}
+.chefs{
+    
+   background-color:  #ffffff;
+    
+    margin-top: 20px;
+position: relative;
+}
+.chefs .container{
+    
+    width: 85%;
+    padding-bottom: 15px;
+    display: flex;
+    margin: auto;
+margin-top: 20px;
+margin-bottom: 50px;
+}
+
+.chefs  .about-image h3{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    margin: 0px;
+    font-weight: 0px;
+}
+
+
+.chefs .container .image img{
+    width: 100%;
+  
+}
+
+.chefs .about-image{
+    text-align: center;
+ margin-bottom: 50px;
+}
+
+.chefs  .about-image h5{
+    color: rgb(127, 127, 144);
+    font-size: 14px;
+    font-weight: 400;
+    font-family:  Inter, sans-serif;
+    padding-top:50px;
+   margin-bottom: 0;
+}
+.chefs  .about-image h3{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    margin: 0px;
+    font-weight: 0px;
+}
+
+.chefs .container .image{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s  ;
+    border-radius: 5px;
+   margin-left:15px;
+   margin-right: 15px;
+   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.chefs .container .image h3{
+    font-size: 18.72;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.chefs .container .image span{
+    color: rgb(127, 127, 144);
+   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+   font-size: 14px;
+margin-top: 5px;
+}
+.chefs .container .image p{
+    color: rgb(127, 127, 144);
+   font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-size:16px ;
+    margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.chefs .container .image .move{
+    background-color:rgba(255, 255, 255, 0.3);
+    width: 10%;
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+ top: 20px;
+ right: -100px;;
+transition: all 0.5s 0.3s;
+border-radius: 5px;
+}
+
+
+.chefs .container .image .move i{
+color: rgba(55, 55, 63, 0.4);
+font-size: 18px;
+margin-bottom: 5px;
+transition: all 0.5s;
+}
+.chefs .container .image i:hover{
+color: #000;
+}
+.chefs .container .image:hover .move{
+    right: 10px;
+    overflow: visible;
+
+}
+.chefs .container .image:hover{
+    transform: scale(1.050);
+}
+.chefs .container .image .move i{
+position: relative;
+left: -27px;
+padding-bottom: 5px;
+top: 0;
+}
+
+.gallary{
+    padding-block: 50px;
+    background-color: rgb(238, 238, 238);
+}
+.gallary .container{
+    margin-inline: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    height: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.gallary .meal{
+    width: calc(calc(100% - (20px * 2)) / 3);
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+}
+.gallary img{
+    width: 100%;
+    transition: all 1s;
+}
+
+.layer{
+    position: absolute;
+    background-color:  rgba(0, 0, 0, 0.59);
+    top: 110%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    transition: all 0.5s;
+  
+}
+.layer p{
+    margin-inline: auto;
+}
+.gallary .meal:hover .layer{
+    top: 0;
+    overflow: visible;
+    height: 100%;
+}
+.gallary .meal:hover img{
+    transform: scale(1.2);
+}
+.layer h2{
+    margin-bottom: 0;
+}
+.contact{
+    margin: auto;
+ height: 200vh;
+}
+
+.contact .container{
+ 
+    width: 90%;
+    margin: auto;
+    height:80%;
+
+}
+
+.contact .container .image{
+    width: 90%;
+ 
+    margin: auto;
+   
+}
+
+.contact .container .image iframe{
+    width: 100%;
+}
+
+.contact .about-image{
+    text-align: center;
+    padding: 0;
+}
+
+.contact  .about-image h3{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 0px;
+    margin-top: 0px;
+}
+.contact  .about-image h5{
+    color: rgb(127, 127, 144);
+    font-size: 14px;
+    font-weight: 400;
+    font-family:  Inter, sans-serif;
+    padding-top:50px;
+   margin-bottom: 0;
+   
+}
+.details{
+ 
+    width: 90%;
+    height: 25%;
+    margin: auto;
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; */
+    position: relative;
+
+}
+.address{
+    display: flex;
+    align-items: center;
+position: relative;
+left: -60;
+    width: 600px;
+    background-color:  #f5f5f5;
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+
+.address i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:rgb(206, 18, 18);
+    color: #ffffff;
+    border-radius: 50%;
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+
+.address h3{
+    margin-left:10px;
+    color: rgb(125, 125, 125);
+    font-size: 20px;
+    font-weight: 700;
+}
+.address p{
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.email{
+    display: flex;
+    align-items: center;
+position: absolute;
+top: 0;
+right: -65px;
+    width:600px;
+    background-color:  #f5f5f5;
+    margin-bottom:30px;
+   height: 100px;
+   margin-left: 300px;
+}
+
+.email i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:rgb(206, 18, 18);
+    color: #ffffff;
+    border-radius: 50%;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.email h3{
+    margin-left:10px;
+    color: rgb(125, 125, 125);
+    font-size: 20px;
+    font-weight: 700;
+}
+.email a{
+    color: rgb(33, 37, 41);
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+position: relative;
+bottom: 10px;
+}
+
+/* phone */
+
+.phone{
+    display: flex;
+    align-items: center;
+position: absolute;
+left: -60;
+    width:600px;
+    background-color:  #f5f5f5;
+}
+
+.phone i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:rgb(206, 18, 18);
+    color: #ffffff;
+    border-radius: 50%;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.phone h3{
+    margin-left:10px;
+    color: rgb(125, 125, 125);
+    font-size: 20px;
+    font-weight: 700;
+}
+.phone p{
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
+}
+.phone a{
+color: #000;
+}
+/* opning */
+.opening-hours{
+    display: flex;
+    align-items: center;
+
+    width: 600px;
+    background-color:  #f5f5f5;
+    position: absolute;
+    right: -65;
+    margin-left: 00px;
+}
+
+.opening-hours i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:rgb(206, 18, 18);
+    color: #ffffff;
+    border-radius: 50%;
+    margin-left: 30px;
+    font-size: 20px;
+ 
+}
+
+.opening-hours h3{
+    margin-left:10px;
+    color: rgb(125, 125, 125);
+    font-size: 20px;
+    font-weight: 700;
+}
+.opening-hours p{
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container .group-input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+   
+}
+.container .group-input input{
+    width: 44.5%;
+   height: 50px;
+border: 1.6px solid #e8e3e3;
+padding: 15px;
+margin-top:20px ;
+}
+.container .subject{
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: 50px;
+    padding: 15px;
+    border: 1.6px solid #e8e3e3;
+}
+
+.container textarea{
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    
+    height: 116px;
+    padding: 15px;
+    border: 1.6px solid #e8e3e3;
+}
+
+.container form {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 30px 0px;
+
+}
+.container form button{
+    border: 0;
+    padding: 15px 40px;
+margin-top: 50px;
+    background-color: rgb(209, 18, 18);
+    border-radius: 100vh  100vh  100vh 100vh;
+    color: #ffffff;
+margin-bottom: 20px;
+position: relative;
+left: 45%;
+transition: all 0.3s ;
+}
+
+.container form button a{
+    color: white;
+}
+.container form button:hover{
+    background-color: red;
+}
+.last-section{
+    height: 25%;
+    background-image: url(images-mealfiy/textured-metal-background.jpg);
+    background-position: center;
+    background-size: contain;
+}
+.last-section .container{
+   
+    width: 80%;
+    display: flex;
+    margin: auto;
+    align-items: start;
+}
+.last-section .container .about{
+
+    padding-top: 20px;
+    text-align: center;
+}
+.last-section .container .about img{
+    width: 50px;
+position: relative;
+left: -150px;
+
+}
+/* .last-section .container .about .mealfiy{
+    margin: 0;
+    padding: 0;
+} */
+.last-section .container .about h1{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    display: inline;
+    position: relative;
+    top:-40px;
+    left: -70px;
+    margin-bottom: 0;
+ 
+}
+.last-section .container .about p{
+    margin-top: 0px;
+    color: white;
+    font-size: 17px;
+    font-family: s"Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+.last-section .container .about h3{
+  padding-bottom: 5px;
+    font-size: 17px;
+    border-bottom: rgba(221, 221, 221, 0.4) solid 1.6px;
+    font-size:18.72;
+    font-family:  Inter, sans-serif ;
+    font-weight:700 ;
+    color: #ffffff;
+}
+
+.last-section .container .about ul{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+ 
+}
+.last-section .container .about i{
+    color: #ffffff;
+    font-size: 25px;
+    position: relative;
+    left: -18;
+}
+
+
+.last-section .container .subscription h3{
+    font-size:18.72;
+    font-family:  Inter, sans-serif ;
+    font-weight:700 ;
+    color: #ffffff;
+}
+.last-section .container .subscription p{
+    color: white;
+    font-size: 17px;
+    font-family: s"Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+}
+.last-section .container .subscription .subscription-group{
+    
+display: flex;
+justify-content: space-between;
+height: 40px;
+gap: 3px;
+}
+
+.subscription-group input{
+    flex-grow: 1;
+   background-color: #f5f5f5;
+   border: 0;
+}
+.subscription-group button{
+background-color: rgb(209, 18, 18);
+border: 0;
+transition: all 0.5s;
+padding: 10px 15px;
+}
+.subscription-group button a{
+    color: #f5f5f5;
+    font-family: Arial;
+    font-size: 15px;
+}
+.subscription-group:hover button{
+background-color: red;
+}
+
+.subscription ul{
+    position: relative;
+    left: -40;
+    --gap: 1.25rem;
+    margin-top: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--gap);
+}
+.subscription ul li{
+    width: calc(calc(100% - var(--gap)) / 2);
+    padding: 5px;
+    position: relative;
+transition: all 0.5s ;
+}
+.subscription ul li ::before{
+    content: ' \f105';
+    font: var(--fa-font-solid);
+  color: #fffefe;
+  margin-right: 8px;
+}
+.subscription ul li a{
+    color: #ffffff;
+    font-family: "Open Sans", system;
+    
+}
+
+.subscription ul li:hover {
+    transform: translateX(10px);
+    background-color: #222;
+}
+.contact-details{
+
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    margin: 10px;
+    padding-top: 0;
+    margin-left: 20px;
+}
+.contact-details h3{
+    font-size: 18.72;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-bottom: 10;
+    color: #ffffff;
+}
+
+.contact-details ul{
+    padding-left: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact-details ul li{
+    margin-bottom: 5px;
+  
+}
+.contact-details a{
+    font-family: "Open Sans", system;
+    color: #ffffff;
+}
+.contact-details i{
+color: rgb(206, 18, 18);
+font-size:22px ;
+font-family:"Font Awesome 6 Free" ;
+margin:5px;
+vertical-align: middle;
+}
+
+.gallary .about-image{
+    text-align: center;
+ margin-bottom: 50px;
+}
+
+.gallary  .about-image h5{
+    color: rgb(127, 127, 144);
+    font-size: 14px;
+    font-weight: 400;
+    font-family:  Inter, sans-serif;
+    padding-top:50px;
+   margin-bottom: 0;
+}
+.gallary  .about-image h3{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    margin: 0px;
+    font-weight: 0px;
+}
